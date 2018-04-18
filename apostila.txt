@@ -3,11 +3,11 @@ Apostila Ionic 3 com Angular 5
 npm install -g ionic
 
 ionic start ionic3-angular5 blank 
+ionic start myApp sidemenu
 
 cd ./ionic3-angular5
 
 ionic serve -l
-
 vai abrir automaticamente uma janela do Ionic
 
 ionic g provider rest
@@ -17,10 +17,9 @@ _______________
 Para debug no device
 
 To test on Android or iOS device, first, update Cordova to the latest version.
-
 sudo npm install -g cordova
-Now, remove default generated platform.
 
+Now, remove default generated platform.
 ionic cordova platform rm android
 ionic cordova platform add android
 ionic cordova platform rm ios
@@ -31,3 +30,49 @@ ionic cordova run android
 
 To run on the iOS device.
 ionic cordova run ios
+
+
+ionic cordova build android
+pega o html, css, assets, e gera um apk/app 
+
+
+_____________________
+
+DEV
+
+Tem que declarar no app.module.ts cada novo componente em declarations e entryComponents.
+
+
+_____________________
+
+IONIC NATIVE
+
+https://ionicframework.com/docs/native/
+
+Camera
+ionic cordova plugin add cordova-plugin-camera
+
+Storage 
+ionic cordova plugin add cordova-sqlite-storage
+
+
+____________________
+
+RESOURCES 
+ÍCONES
+
+Splash e ícone
+
+ícone 1024 x 1024
+splash 2732 x 2732
+
+ionic cordova resources --force
+https://ionicframework.com/docs/native/
+
+
+____________________
+
+DOCS
+
+https://ionicframework.com/docs/components/#inputs
+
